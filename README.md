@@ -6,9 +6,6 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 
 ![](design/interactive-rating-component_mobile-design.png)
 
-
-### Links
-
 - Live Site URL: https://taavi80.github.io/interactive-rating-component/
 
 ## My process
