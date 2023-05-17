@@ -77,6 +77,12 @@ main {
   background-color: var(--Orange);
   color: var(--White);
 }
+
+.rating .active {
+  background-color: var(--Light-Grey);
+  color: var(--White);
+}
+
 .rating div span {
   transform: translateY(2px);
 }
@@ -120,9 +126,4 @@ button:hover {
   color: var(--Orange);
   padding: 0.3rem 0.9rem;
   border-radius: 25px;
-}
-
-.grey {
-  background-color: var(--Light-Grey);
-  color: var(--White);
 }

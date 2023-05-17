@@ -1,28 +1,22 @@
 const nums = document.querySelectorAll(".num");
-console.log(nums);
-
-let active = false;
+const button = document.querySelector("button");
+const userRating = document.querySelector(".userRating");
 let rating = 0;
 
-let numArr = [];
-
-nums.forEach((num) => {
-  num.addEventListener("click", (e) => {
-    if (num.style.backgroundColor === "" && !active) {
-      num.style.backgroundColor = "rgb(149, 158, 172)";
-      num.style.color = "white";
-      active = true;
-      let number = parseInt(num.innerText);
-
-      if (number > rating) {
-        rating = number;
-        console.log(rating);
+for (let num of nums) {
+  num.addEventListener("click", () => {
+    if (!num.classList.contains("active")) {
+      if (rating !== 0) {
+        nums[rating - 1].classList.remove("active");
       }
-    } else {
-      num.style.backgroundColor = "";
-      num.style.color = "";
-      active = false;
-      rating = 0;
+      num.classList.add("active");
+      rating = parseInt(num.innerText);
     }
   });
+}
+
+button.addEventListener("click", () => {
+  userRating.innerText = rating;
+  document.querySelector(".state1").style.display = "none";
+  document.querySelector(".state2").style.display = "block";
 });
